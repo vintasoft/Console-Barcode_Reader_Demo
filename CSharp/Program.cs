@@ -10,6 +10,8 @@ namespace BarcodeReaderConsoleDemo
     {
         static void Main(string[] args)
         {
+            VintasoftBarcode.VintasoftBarcodeLicense.Register();
+
             try
             {
                 if (args.Length < 1)
@@ -19,9 +21,11 @@ namespace BarcodeReaderConsoleDemo
                     return;
                 }
 
+#if NETCOREAPP3_0
                 // register custom encodings for QR and HanXin Code barcodes 
                 // (System.Text.Encoding.CodePages package)
                 System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+#endif
 
                 // image with barcode
                 string filename = args[0];
@@ -411,6 +415,27 @@ namespace BarcodeReaderConsoleDemo
                     break;
                 case "XFACompressedQRCode":
                     settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.XFACompressedQRCode);
+                    break;
+                case "ISBT128":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.ISBT128);
+                    break;
+                case "ISBT128DataMatrix":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.ISBT128DataMatrix);
+                    break;
+                case "HIBCLIC128":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.HIBCLIC128);
+                    break;
+                case "HIBCLIC39":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.HIBCLIC39);
+                    break;
+                case "HIBCLICAztecCode":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.HIBCLICAztecCode);
+                    break;
+                case "HIBCLICDataMatrix":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.HIBCLICDataMatrix);
+                    break;
+                case "HIBCLICQRCode":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.HIBCLICQRCode);
                     break;
                 default:
                     throw new NotSupportedException(string.Format("Barcode type '{0}' is undefined.", name));
