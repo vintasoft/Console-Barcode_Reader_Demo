@@ -21,7 +21,7 @@ namespace BarcodeReaderConsoleDemo
                     return;
                 }
 
-#if NETCOREAPP3_0
+#if NETCORE
                 // register custom encodings for QR and HanXin Code barcodes 
                 // (System.Text.Encoding.CodePages package)
                 System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
@@ -145,6 +145,9 @@ namespace BarcodeReaderConsoleDemo
                     break;
                 case "DataMatrix":
                     settings.ScanBarcodeTypes |= BarcodeType.DataMatrix;
+                    break;
+                case "DotCode":
+                    settings.ScanBarcodeTypes |= BarcodeType.DotCode;
                     break;
                 case "DutchKIX":
                     settings.ScanBarcodeTypes |= BarcodeType.DutchKIX;
@@ -307,6 +310,9 @@ namespace BarcodeReaderConsoleDemo
                     break;
                 case "GS1DataMatrix":
                     settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DataMatrix);
+                    break;
+                case "GS1DotCode":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DotCode);
                     break;
                 case "GS1QR":
                     settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1QR);
