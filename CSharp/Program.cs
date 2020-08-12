@@ -10,8 +10,6 @@ namespace BarcodeReaderConsoleDemo
     {
         static void Main(string[] args)
         {
-            VintasoftBarcode.VintasoftBarcodeLicense.Register();
-
             try
             {
                 if (args.Length < 1)
