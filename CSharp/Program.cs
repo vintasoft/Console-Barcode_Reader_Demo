@@ -441,6 +441,72 @@ namespace BarcodeReaderConsoleDemo
                 case "HIBCLICQRCode":
                     settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.HIBCLICQRCode);
                     break;
+                case "SwissQRCode":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.SwissQRCode);
+                    break;
+                case "EAN13_CCA":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.EAN13_CCA);
+                    break;
+                case "EAN13_CCB":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.EAN13_CCB);
+                    break;
+                case "EAN8_CCA":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.EAN8_CCA);
+                    break;
+                case "EAN8_CCB":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.EAN8_CCB);
+                    break;
+                case "UPCA_CCA":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.UPCA_CCA);
+                    break;
+                case "UPCA_CCB":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.UPCA_CCB);
+                    break;
+                case "UPCE_CCA":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.UPCE_CCA);
+                    break;
+                case "UPCE_CCB":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.UPCE_CCB);
+                    break;
+                case "GS1_128_CCA":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1_128_CCA);
+                    break;
+                case "GS1_128_CCB":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1_128_CCB);
+                    break;
+                case "GS1_128_CCC":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1_128_CCC);
+                    break;
+                case "GS1DataBarExpanded_CCA":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DataBarExpanded_CCA);
+                    break;
+                case "GS1DataBarExpanded_CCB":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DataBarExpanded_CCB);
+                    break;
+                case "GS1DataBarExpandedStacked_CCA":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DataBarExpandedStacked_CCA);
+                    break;
+                case "GS1DataBarExpandedStacked_CCB":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DataBarExpandedStacked_CCB);
+                    break;
+                case "GS1DataBarLimited_CCA":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DataBarLimited_CCA);
+                    break;
+                case "GS1DataBarLimited_CCB":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DataBarLimited_CCB);
+                    break;
+                case "GS1DataBarStacked_CCA":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DataBarStacked_CCA);
+                    break;
+                case "GS1DataBarStacked_CCB":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DataBarStacked_CCB);
+                    break;
+                case "GS1DataBar_CCA":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DataBar_CCA);
+                    break;
+                case "GS1DataBar_CCB":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DataBar_CCB);
+                    break;
                 default:
                     throw new NotSupportedException(string.Format("Barcode type '{0}' is undefined.", name));
             }
@@ -501,57 +567,8 @@ namespace BarcodeReaderConsoleDemo
             settings.ScanBarcodeTypes |= BarcodeType.UPCE;
             settings.ScanBarcodeTypes |= BarcodeType.UPCEPlus2;
             settings.ScanBarcodeTypes |= BarcodeType.UPCEPlus5;
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.AAMVA);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.Code32);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.Code39Extended);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.DeutschePostIdentcode);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.DeutschePostLeitcode);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.DhlAwb);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.EANVelocity);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.FedExGround96);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1Aztec);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DataBar);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DataBarExpanded);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DataBarExpandedStacked);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DataBarLimited);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DataBarStacked);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DataMatrix);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1QR);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1_128);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.Interleaved2of5ChecksumISO16390);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.Interleaved2of5ChecksumMod10C);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.ISBN);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.ISBNPlus2);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.ISBNPlus5);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.ISMN);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.ISMNPlus2);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.ISMNPlus5);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.ISSN);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.ISSNPlus2);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.ISSNPlus5);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.ITF14);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.JAN13);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.JAN13Plus2);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.JAN13Plus5);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.JAN8);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.JAN8Plus2);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.JAN8Plus5);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.MailmarkCmdmType29);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.MailmarkCmdmType7);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.MailmarkCmdmType9);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.NumlyNumber);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.OPC);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.PPN);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.PZN);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.SSCC18);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.SwissPostParcel);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.VicsBol);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.VicsScacPro);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.VIN);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.XFACompressedAztec);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.XFACompressedDataMatrix);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.XFACompressedPDF417);
-            settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.XFACompressedQRCode);
+            
+            settings.ScanBarcodeSubsets.AddRange(BarcodeSymbologySubsets.GetSupportedBarcodeSymbologySubsets());            
         }
     }
 }
