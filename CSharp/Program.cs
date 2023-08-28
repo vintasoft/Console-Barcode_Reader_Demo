@@ -10,6 +10,9 @@ namespace BarcodeReaderConsoleDemo
     {
         static void Main(string[] args)
         {
+            // register the evaluation license for VintaSoft Barcode .NET SDK
+            Vintasoft.Barcode.BarcodeGlobalSettings.Register("REG_USER", "REG_EMAIL", "EXPIRATION_DATE", "REG_CODE");
+
             try
             {
                 if (args.Length < 1)
