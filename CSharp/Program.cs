@@ -333,6 +333,9 @@ namespace BarcodeReaderConsoleDemo
                 case "Interleaved2of5ChecksumMod10C":
                     settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.Interleaved2of5ChecksumMod10C);
                     break;
+                case "ItalianPost2of5":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.ItalianPost2of5);
+                    break;
                 case "ISBN":
                     settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.ISBN);
                     break;
@@ -531,6 +534,7 @@ namespace BarcodeReaderConsoleDemo
             //settings.ScanBarcodeTypes |= BarcodeType.Pharmacode;
 
             settings.ScanBarcodeTypes |= BarcodeType.AustralianPost;
+            settings.ScanBarcodeTypes |= BarcodeType.JapanPost;
             settings.ScanBarcodeTypes |= BarcodeType.Aztec;
             settings.ScanBarcodeTypes |= BarcodeType.Codabar;
             settings.ScanBarcodeTypes |= BarcodeType.Code11;
