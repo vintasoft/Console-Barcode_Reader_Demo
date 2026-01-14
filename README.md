@@ -1,4 +1,4 @@
-# VintaSoft Barcode Reader Console Demo
+﻿# VintaSoft Barcode Reader Console Demo
 
 This console C# project uses <a href="https://www.vintasoft.com/vsbarcode-dotnet-index.html">VintaSoft Barcode .NET SDK</a> and demonstrates how to recognize barcodes in images in Windows and Linux.
 
