@@ -10,9 +10,6 @@ namespace BarcodeReaderConsoleDemo
     {
         static void Main(string[] args)
         {
-            // register the evaluation license for VintaSoft Barcode .NET SDK
-            Vintasoft.Barcode.BarcodeGlobalSettings.Register("REG_USER", "REG_EMAIL", "EXPIRATION_DATE", "REG_CODE");
-
             try
             {
                 if (args.Length < 1)
@@ -23,15 +20,29 @@ namespace BarcodeReaderConsoleDemo
                 }
 
 #if NETCORE
-                // initialize Vintasoft.Barcode.SkiaSharp Assembly
-                Vintasoft.Barcode.SkiaSharpAssembly.Init();
-
                 // register custom encodings for QR and HanXin Code barcodes 
                 // (System.Text.Encoding.CodePages package)
                 System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
-#else
-                // initialize Vintasoft.Barcode.Gdi Assembly
-                Vintasoft.Barcode.GdiAssembly.Init();
+#endif
+
+#if !DISABLE_AI
+                try
+                {
+                    // initialize Vintasoft.Barcode.AI.1D assembly
+                    Vintasoft.Barcode.Ai1DAssembly.Init();
+                }
+                catch
+                {
+                }
+
+                try
+                {
+                    // initialize Vintasoft.Barcode.AI.2D assembly
+                    Vintasoft.Barcode.Ai2DAssembly.Init();
+                }
+                catch
+                {
+                }
 #endif
 
                 // image with barcode
@@ -321,6 +332,12 @@ namespace BarcodeReaderConsoleDemo
                 case "GS1DotCode":
                     settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DotCode);
                     break;
+                case "GS1DigitalLinkQR":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DigitalLinkQR);
+                    break;
+                case "GS1DigitalLinkDataMatrix":
+                    settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1DigitalLinkDataMatrix);
+                    break;
                 case "GS1QR":
                     settings.ScanBarcodeSubsets.Add(BarcodeSymbologySubsets.GS1QR);
                     break;
@@ -543,6 +560,7 @@ namespace BarcodeReaderConsoleDemo
             settings.ScanBarcodeTypes |= BarcodeType.Code39;
             settings.ScanBarcodeTypes |= BarcodeType.Code93;
             settings.ScanBarcodeTypes |= BarcodeType.DataMatrix;
+            settings.ScanBarcodeTypes |= BarcodeType.DotCode;
             settings.ScanBarcodeTypes |= BarcodeType.DutchKIX;
             settings.ScanBarcodeTypes |= BarcodeType.EAN13;
             settings.ScanBarcodeTypes |= BarcodeType.EAN13Plus2;
