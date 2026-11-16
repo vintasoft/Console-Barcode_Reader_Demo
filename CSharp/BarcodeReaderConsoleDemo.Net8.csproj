@@ -15,7 +15,7 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>    
 
-    <Version>16.1.1.1</Version>
+    <Version>16.1.2.1</Version>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>TRACE;NETCORE</DefineConstants>
@@ -24,11 +24,11 @@
     <DefineConstants>TRACE;NETCORE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Vintasoft.Barcode" Version="16.1.0.1" />
-    <PackageReference Include="Vintasoft.Barcode.AI.1D" Version="16.1.0.1" />
-    <PackageReference Include="Vintasoft.Barcode.AI.2D" Version="16.1.0.1" />
-    <PackageReference Include="Vintasoft.Barcode.SkiaSharp" Version="16.1.0.1" />
-    <PackageReference Include="Vintasoft.Shared" Version="4.7.0.1" />
+    <PackageReference Include="Vintasoft.Barcode" Version="16.1.2.1" />
+    <PackageReference Include="Vintasoft.Barcode.AI.1D" Version="16.1.2.1" />
+    <PackageReference Include="Vintasoft.Barcode.AI.2D" Version="16.1.2.1" />
+    <PackageReference Include="Vintasoft.Barcode.SkiaSharp" Version="16.1.2.1" />
+    <PackageReference Include="Vintasoft.Shared" Version="4.7.1.1" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.23.0" />
